@@ -1,2 +1,20 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<h1>Artist:<span style="color:blue"> <%= @artist.name %> </span> </h1>
+<div class= "container">
+<table class="table m-5">
+  <thead>
+    <tr>
+      <th scope="col">Cover Image</th>
+      <th scope="col">Year</th>
+      <th scope="col">Name</th>
+    </tr>
+     </thead>
+
+    <tr>
+    <% @artist.albums do |album| %>
+      <td scope="col"><%= album.cover %></td>
+      <td scope="col"><%= album.year %></td>
+      <td scope="col"><%= link_to album.name, albums_path(album) %></td>
+      <% end %>
+    </tr>
+</table>
+</div>

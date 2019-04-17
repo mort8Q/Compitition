@@ -1,2 +1,11 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+<h1 class="text-center"> Favourite Artists</h1>
+<div class= "container">
+<% @artists.each do |artist| %>
+<div class="card p-1 mr-5 ml-5">
+  <div class="card-body">
+ <%= link_to artist.name, artist_path(artist)%>
+</div>
+</div>
+
+<% end %>
+</div>

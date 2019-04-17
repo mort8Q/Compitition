@@ -1,0 +1,31 @@
+<h1 class="ml-5 mt-2 mb-5">Songs</h1>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width: 20%" scope="col">Name</th>
+        <th style="width: 30%" scope="col">Player</th>
+        <th style="width: 25%" scope="col">Album Cover</th>
+        <th style="width: 20%" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @songs.each do |song| %>
+        <tr>
+          <td class="justify-content-center"><%= song.name %></td>
+          <td>
+            <audio controls>
+              <source src=" <%= song.url %> " type="audio/ogg">
+            </audio>
+          </div>
+        </td>
+        <td class="justify-content-center">placeholder</td>
+        <td>
+          <div class="justify-content-center">
+            <%= link_to 'View Album'%>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

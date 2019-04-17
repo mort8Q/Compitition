@@ -1,0 +1,15 @@
+        <h1>Albums</h1>
+        <div class="container">
+        <div class="card-columns">
+
+        <% @albums.each do |album| %>
+        <div class="card" style="width: 18rem;">
+    <img class="cover" src="<%= album.cover %>" alt="">
+    <div class="card-body">
+        <h5 class="card-title"> <%= link_to  album.name , album_path(album) %></h5>
+        
+    </div>
+    </div>
+    <% end %>
+    </div>
+    </div>
